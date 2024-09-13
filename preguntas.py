@@ -76,7 +76,8 @@ def pregunta_10():
         .apply(lambda x: ":".join(map(str, sorted(x))))
         .reset_index()
     )
-    tabla.columns = ["_c0", "_c1"]
+    tabla.columns = ["_c1", "_c2"]
+    tabla = tabla.set_index("_c1")
 
     return tabla
 
